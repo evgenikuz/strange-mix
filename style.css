@@ -1,0 +1,341 @@
+*{
+    font-family: 'Rubik', sans-serif;
+    color: #414141;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+body{
+    background: #FBF8EC;
+    padding:0 15px;
+    width: 100%;
+}
+nav a{
+    text-decoration: none;
+    display: inline-block;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    left:0;
+    top:0;
+    right:0;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    background-color:#70C05B;
+    position: fixed;
+    z-index: 100;
+}
+nav li{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+nav ul li:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+nav ul li:active{
+    box-shadow: -2px -2px 5px white;
+}
+h1{
+    margin-top: 90px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.content {
+    max-width: 1208px;
+    width:100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    height: 100%;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin:0px auto;
+    margin-bottom: 40px;
+    position: sticky;
+    top:40px;
+    z-index: 3;
+    background-color:#FBF8EC;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.article {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+
+}
+.pic-container{
+    position: relative;
+}
+.article-pic {
+    width: 100%;
+    height: 162px;
+    object-position: top;
+    object-fit:cover;
+}
+.eye {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0;
+    margin: 0 auto;
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0.00);
+    border: none;
+    opacity: 0.5;
+}
+.eye svg{
+    fill:white;
+}
+.eye:hover{
+    transform: scale(1.1);
+}
+.eye:active{
+    opacity: 0.8;
+}
+.article-info {
+    min-height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+}
+.article time {
+    align-self: stretch;
+    color: #8F8F8F;
+    font-size: 12px;
+}
+.article-header {
+    align-self: stretch;
+    font-size: 18px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.article-preview {
+    align-self: stretch;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.more {
+    min-width: 150px;
+    height:24px;
+    max-width: max-content;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    color: #FFF;
+    background: #70C05B;
+    text-align: center;
+    gap: 8px;
+    border-radius: 4px;
+    margin-top: auto;
+}
+.disabled{
+    background-color: #E5FFDE;
+    color: #70C05B;
+    pointer-events: none;
+    cursor: default;
+}
+.more:hover{
+    box-shadow: 4px 8px 16px 0px rgba(112, 192, 91, 0.20)
+}
+.more:active{
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.20)
+}
+.pancake-shop{
+    max-width: 1208px;
+    width:100%;
+    margin: 0 auto;
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.menu-card {
+    max-width: 376px;
+    height: 349px;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    background-color: white;
+    overflow: hidden;
+}
+.menu-pic img {
+    height:160px;
+    width:100%;
+    object-position: center;
+    object-fit: cover;
+}
+.menu-pic {
+    position: relative;
+    height:160px;
+}
+.discount {
+    border-radius: 4px;
+    background: #F63;
+    padding: 4px 8px;
+    color: white;
+    width: 40px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.favorite {
+    padding: 4px;
+    height:32px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    opacity: 0.5;
+    cursor: pointer;
+    border: 0px;   
+    border-radius: 4px;
+}
+.favorite svg{
+    fill:#414141;    
+}
+.favorite:hover svg{
+    transform: scale(1.1); 
+    fill:#f63;
+}
+.favorite:active svg .heart-icon{
+    fill:#F63;
+}
+.menu-description {
+    height: 173px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+.price-container {
+    display: flex;
+    justify-content: space-between;
+}
+.special-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px;
+}
+.regular-price {
+    margin: 0px;
+}
+.price-title {
+    font-size: 12px;
+    color: #BFBFBF;
+    margin: 0px;
+    height: 18px;
+}
+.regular{
+    text-align: right;
+}
+.name {
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.to-cart {
+    padding: 8px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #70C05B;
+    background-color:white;
+    text-align: center;
+    color: #70C05B;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    cursor: pointer;
+    align-self: stretch;
+    margin-top: auto;
+}
+.to-cart:hover {
+    transform: scale(1.01);
+    color: white;
+    background-color: #70C05B;
+}
+.raiting {
+    text-align: center;
+    height:16px;
+    display: flex;
+    width:max-content;
+}
+.raiting input {
+    display: none;
+}
+.raiting label {
+    margin: 0;
+    cursor: pointer;
+}
+.raiting label svg {
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+    fill: #BFBFBF;
+    transition: fill 0.3s;
+}
+.raiting input:checked ~ label svg {
+    fill: #BFBFBF;
+}
+.raiting:hover label svg {
+    fill: #FF6633;
+}
+.raiting input:hover ~ label svg {
+    fill: #BFBFBF;
+}
+
+@media (min-width:801px) and (max-width:1208px) {
+    .grid-container,.menu {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .menu-card {
+        max-width: 370px;
+    }
+    .article {
+        max-width: 370px;
+    }
+}
+@media (max-width:800px) {
+    .grid-container, .menu {
+        grid-template-columns: 1fr;
+    }
+    .article {
+        max-width: 550px;
+    }
+    .menu-card {
+        max-width: 550px;
+    }
+}
+@media (max-width:600px) {
+    nav li {
+        font-size: 15px;
+    }
+}
